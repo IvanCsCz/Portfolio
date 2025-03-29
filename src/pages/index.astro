@@ -1,0 +1,31 @@
+---
+import Layout from '../layouts/Layout.astro';
+import "../styles/global.css";
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<main class="relative grid max-w-7xl gap-12 p-8 max-sm:py-16 md:grid-cols-6 md:p-16 xl:gap-24 print:max-w-none print:grid-cols-1 print:gap-6">
+		<div class="space-y-6 md:col-span-2 print:col-span-1 print:grid print:grid-cols-2 print:gap-5 print:space-y-0">
+			<h1>Hero</h1>
+			<h1>About</h1>
+			<h1>ThemeSwitch</h1>
+			<!-- <Hero />
+			<About />
+			<ThemeSwitch /> -->
+		</div>
+		<div class="space-y-12 md:col-span-4 print:col-span-1 print:grid print:grid-cols-4 print:gap-2 print:space-y-0">
+			<h1 class="print:col-span-3">Experience</h1>
+			<h1 class="print:hidden">Projects</h1>
+			<h1 class="print:hidden">Skills</h1>
+			<h1 class="order-first">Education</h1>
+			<!-- <Experience className="print:col-span-3" />
+			<Projects className="print:hidden" />
+			<Skills className="print:hidden" />
+			<Education className="order-first" /> -->
+		</div>
+		<!-- <Tail /> -->
+	</main>
+</Layout>
