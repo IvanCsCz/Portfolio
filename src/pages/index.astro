@@ -1,22 +1,63 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import Photo from '../components/Photo.astro'
+import GitHub from '../icons/GitHub.astro'
+import LinkedIn from '../icons/LinkedIn.astro'
+import Mail from '../icons/Mail.astro'
+import Phone from '../icons/Phone.astro'
+import PersonalInfo from '../components/PersonalInfo.astro'
+import MailBox from '../icons/MailBox.astro'
+import MapPin from '../icons/MapPin.astro'
+import Language from '../icons/Language.astro'
+
 import "../styles/global.css";
+import SocialMediaBtn from '../components/SocialMediaBtn.astro';
 ---
 
 <Layout>
-	<main class="relative flex justify-center max-md:flex-col py-8 px-16 gap-16">
-		<div class="justify-center w-1/3 p-6 h-fit bg-neutral-800">
-			<h1>Hero</h1>
-			<h1>About</h1>
-			<h1>ThemeSwitch</h1>
-			<!-- <Hero />
-			<About />
-			<ThemeSwitch /> -->
-		</div>
-		<div class="flex flex-col gap-3 w-full ">
-			<header class="bg-neutral-800">Header</header>
+	<main class="flex justify-center max-md:flex-col max-md:items-center py-8 px-16 gap-16">
+		<section class="flex flex-col gap-6 justify-center p-6 h-fit rounded-2xl bg-[#1c1c1c]">
+			<Photo />
+			
+			<h1 class="pt-6 text-center text-3xl font-bold">Jose Ivan Campos Chavez</h1>
+			<h2 class="text-center text-lg">Computer Systems Engineer | Full Stack Developer</h2>
 
-			<div class="p-6 bg-neutral-800">
+			<div class="flex justify-center">
+				<SocialMediaBtn href='https://github.com/IvanCsCz'>
+					<GitHub />
+				</SocialMediaBtn>
+				<SocialMediaBtn href='https://www.linkedin.com/in/ivancscz/'>
+					<LinkedIn />
+				</SocialMediaBtn>
+				<a href="#" class="cursor-pointer text-black bg-[#a8b1ff] hover:bg-[#7682f0] font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2">
+					<Mail />
+				</a>
+			</div>
+
+			<div class="flex flex-col gap-2 px-6 py-6 w-full rounded-2xl bg-[#202020]">
+				<PersonalInfo title="PHONE" label="+52 341-129-86-75" secondaryLabel="+52 341-129-86-75">
+					<Phone />
+				</PersonalInfo>
+				<PersonalInfo title="EMAIL" label="ivan820plus@gmail.com">
+					<MailBox />
+				</PersonalInfo>
+				<PersonalInfo title="LOCATION" label="México/Jalisco">
+					<MapPin />
+				</PersonalInfo>
+				<PersonalInfo title="LANGUAGES" label="Spanish" secondaryLabel="English">
+					<Language />
+				</PersonalInfo>
+			</div>
+
+			<button class="py-2 rounded-2xl text-lg text-black font-bold cursor-pointer bg-[#a8b1ff] hover:bg-[#7682f0]">
+				Download CV
+			</button>
+		</section>
+
+		<section class="flex flex-col gap-3 w-full ">
+			<header class="bg-[#1c1c1c]">Header</header>
+
+			<div class="p-6 bg-[#1c1c1c]">
 
 				<h1 >Experience</h1>
 				<h1 >Projects</h1>
@@ -25,7 +66,7 @@ import "../styles/global.css";
 				
 			</div>
 
-		</div>
+		</section>
 		<!-- <Tail /> -->
 	</main>
 </Layout>
