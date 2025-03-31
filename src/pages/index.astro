@@ -1,26 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Photo from '../components/Photo.astro'
+
 import GitHub from '../icons/GitHub.astro'
 import LinkedIn from '../icons/LinkedIn.astro'
 import Mail from '../icons/Mail.astro'
 import Phone from '../icons/Phone.astro'
-import PersonalInfo from '../components/PersonalInfo.astro'
 import MailBox from '../icons/MailBox.astro'
 import MapPin from '../icons/MapPin.astro'
 import Language from '../icons/Language.astro'
+import Briefcase from '../icons/Briefcase.astro'
+import Code from '../icons/Code.astro'
+import Graduation from '../icons/Graduation.astro'
+import User from '../icons/User.astro'
+import Lightbulb from '../icons/Lightbulb.astro'
 
-import "../styles/global.css";
+import Photo from '../components/Photo.astro'
+import PersonalInfo from '../components/PersonalInfo.astro'
+import Header from '../components/Header.astro'
 import SocialMediaBtn from '../components/SocialMediaBtn.astro';
+import Experience from '../components/Experience.astro'
+import ModalProject1 from '../components/ModalProject1.astro';
+import ModalProject2 from '../components/ModalProject2.astro';
+import "../styles/global.css";
 ---
 
 <Layout>
-	<main class="flex justify-center max-md:flex-col max-md:items-center py-8 px-16 gap-16">
-		<section class="flex flex-col gap-6 justify-center p-6 h-fit rounded-2xl bg-[#1c1c1c]">
+	<main class="flex justify-center max-lg:flex-col max-lg:items-center py-8 px-16 gap-16">
+		<section class="sticky top-1 max-lg:relative flex flex-col gap-4 justify-center p-6 h-fit rounded-2xl bg-[#1c1c1c]">
 			<Photo />
 			
-			<h1 class="pt-6 text-center text-3xl font-bold">Jose Ivan Campos Chavez</h1>
-			<h2 class="text-center text-lg">Computer Systems Engineer | Full Stack Developer</h2>
+			<h1 class="pt-6 text-center text-3xl font-bold text-balance">Jose Ivan Campos Chavez</h1>
+			<h2 class="text-center text-lg text-balance">Computer Systems Engineer | Full Stack Developer</h2>
 
 			<div class="flex justify-center">
 				<SocialMediaBtn href='https://github.com/IvanCsCz'>
@@ -29,40 +39,83 @@ import SocialMediaBtn from '../components/SocialMediaBtn.astro';
 				<SocialMediaBtn href='https://www.linkedin.com/in/ivancscz/'>
 					<LinkedIn />
 				</SocialMediaBtn>
-				<a href="#" class="cursor-pointer text-black bg-[#a8b1ff] hover:bg-[#7682f0] font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2">
+				<a href="mailto:ivan820plus@gmail.com" class="cursor-pointer text-black bg-[#a8b1ff] hover:bg-[#7682f0] font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2">
 					<Mail />
 				</a>
 			</div>
 
-			<div class="flex flex-col gap-2 px-6 py-6 w-full rounded-2xl bg-[#202020]">
-				<PersonalInfo title="PHONE" label="+52 341-129-86-75" secondaryLabel="+52 341-129-86-75">
-					<Phone />
-				</PersonalInfo>
+			<div class="flex flex-col gap-2 px-6 py-2 w-full rounded-2xl bg-[#202020]">
 				<PersonalInfo title="EMAIL" label="ivan820plus@gmail.com">
 					<MailBox />
 				</PersonalInfo>
-				<PersonalInfo title="LOCATION" label="México/Jalisco">
-					<MapPin />
+				<PersonalInfo title="PHONE" label="+52 341-129-86-75" secondaryLabel="+52 341-167-48-72">
+					<Phone />
 				</PersonalInfo>
+				<!-- <PersonalInfo title="LOCATION" label="México/Jalisco">
+					<MapPin />
+				</PersonalInfo> -->
 				<PersonalInfo title="LANGUAGES" label="Spanish" secondaryLabel="English">
 					<Language />
 				</PersonalInfo>
 			</div>
 
-			<button class="py-2 rounded-2xl text-lg text-black font-bold cursor-pointer bg-[#a8b1ff] hover:bg-[#7682f0]">
+			<a href="/JoseIvanCamposCV.pdf" download="ivcv.pdf" class="py-2 rounded-2xl text-center text-lg text-black font-bold cursor-pointer bg-[#a8b1ff] hover:bg-[#7682f0]">
 				Download CV
-			</button>
+			</a>
 		</section>
 
-		<section class="flex flex-col gap-3 w-full ">
-			<header class="bg-[#1c1c1c]">Header</header>
+		<section class="flex flex-col gap-8 w-full ">
+			<Header />
+			<div class="flex flex-col gap-12 rounded-2xl px-8 py-12 bg-[#1c1c1c]">
 
-			<div class="p-6 bg-[#1c1c1c]">
+				<section id="experience" class="flex flex-col scroll-mt-42">
+					<div class="flex items-center gap-2">
+						<Briefcase />
+						<h3 class="w-full text-bold text-2xl">Experience</h3>
+					</div>
+					<Experience />
+				</section>
 
-				<h1 >Experience</h1>
-				<h1 >Projects</h1>
-				<h1 >Skills</h1>
-				<h1 >Education</h1>
+				<section id="projects" class="flex flex-col scroll-mt-30">
+					<div class="flex items-center gap-2">
+						<Code />
+						<h3 class="w-full text-bold text-2xl">Projects</h3>
+					</div>
+					
+					<button class="bg-blue-500 text-white px-4 py-2 rounded" id="openModal">Abrir Modal</button>
+					<button class="bg-blue-500 text-white px-4 py-2 rounded" id="openModal">Abrir Modal</button>	
+					<ModalProject1 />
+				</section>
+
+				<section id="skills" class="flex flex-col scroll-mt-20">
+					<div class="flex items-center gap-2">
+						<Lightbulb />
+						<h3 class="w-full text-bold text-2xl">Skills</h3>
+					</div>
+					
+					
+
+				</section>
+
+				<section id="education" class="flex flex-col scroll-mt-20">
+					<div class="flex items-center gap-2">
+						<Graduation />
+						<h3 class="w-full text-bold text-2xl">Education</h3>
+					</div>
+					
+					
+
+				</section>
+
+				<section id="about-me" class="flex flex-col scroll-mt-20">
+					<div class="flex items-center gap-2">
+						<User />
+						<h3 class="w-full text-bold text-2xl">About me</h3>
+					</div>
+					
+					
+
+				</section>
 				
 			</div>
 
@@ -70,3 +123,23 @@ import SocialMediaBtn from '../components/SocialMediaBtn.astro';
 		<!-- <Tail /> -->
 	</main>
 </Layout>
+
+<script>
+  const openModal = document.getElementById("openModal")!;
+  const closeModal = document.getElementById("closeModal")!;
+  const modal = document.getElementById("modal")!;
+
+  openModal.addEventListener("click", () => {
+    modal.classList.remove("opacity-0", "invisible");
+  });
+
+  closeModal.addEventListener("click", () => {
+    modal.classList.add("opacity-0", "invisible");
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.classList.add("opacity-0", "invisible");
+    }
+  });
+</script>

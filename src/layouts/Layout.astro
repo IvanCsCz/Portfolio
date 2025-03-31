@@ -24,5 +24,12 @@ import '@fontsource-variable/onest';
 		height: 100%;
 		color: white;
 		font-family: 'Onest Variable', sans-serif;
+		scroll-behavior: smooth;
+	}
+
+	@media (prefers-reduced-motion: reduce){
+		html{
+			scroll-behavior: auto;
+		}
 	}
 </style>
