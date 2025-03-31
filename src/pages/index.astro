@@ -13,6 +13,19 @@ import Code from '../icons/Code.astro'
 import Graduation from '../icons/Graduation.astro'
 import User from '../icons/User.astro'
 import Lightbulb from '../icons/Lightbulb.astro'
+import React from '../icons/React.astro'
+import CSS from '../icons/CSS.astro'
+import Git from '../icons/Git.astro'
+import Java from '../icons/Java.astro'
+import Springboot from '../icons/Springboot.astro'
+import Angular from '../icons/Angular.astro'
+import Javascript from '../icons/Javascript.astro'
+import Typescript from '../icons/Typescript.astro'
+import HTML from '../icons/HTML.astro'
+import Tailwind from '../icons/Tailwind.astro'
+import PostgreSQL from '../icons/PostgreSQL.astro'
+import MySQL from '../icons/MySQL.astro'
+import Figma from '../icons/Figma.astro'
 
 import Photo from '../components/Photo.astro'
 import PersonalInfo from '../components/PersonalInfo.astro'
@@ -22,6 +35,7 @@ import Experience from '../components/Experience.astro'
 import ModalProject1 from '../components/ModalProject1.astro';
 import ModalProject2 from '../components/ModalProject2.astro';
 import "../styles/global.css";
+import Badge from '../components/Badge.astro';
 ---
 
 <Layout>
@@ -66,7 +80,7 @@ import "../styles/global.css";
 
 		<section class="flex flex-col gap-8 w-full ">
 			<Header />
-			<div class="flex flex-col gap-12 rounded-2xl px-8 py-12 bg-[#1c1c1c]">
+			<div class="flex flex-col gap-12 rounded-2xl px-8 py-12  bg-[#1c1c1c]">
 
 				<section id="experience" class="flex flex-col scroll-mt-42">
 					<div class="flex items-center gap-2">
@@ -83,17 +97,56 @@ import "../styles/global.css";
 					</div>
 					
 					<button class="bg-blue-500 text-white px-4 py-2 rounded" id="openModal">Abrir Modal</button>
-					<button class="bg-blue-500 text-white px-4 py-2 rounded" id="openModal">Abrir Modal</button>	
 					<ModalProject1 />
 				</section>
 
-				<section id="skills" class="flex flex-col scroll-mt-20">
+				<section id="skills" class="flex flex-col scroll-mt-30">
 					<div class="flex items-center gap-2">
 						<Lightbulb />
 						<h3 class="w-full text-bold text-2xl">Skills</h3>
 					</div>
 					
-					
+					<div class="flex flex-wrap p-6 gap-4">
+						<Badge label="Angular" color="text-red-600" borderColor="border-red-600">
+							<Angular />
+						</Badge>
+						<Badge label="Java" color="text-red-600" borderColor="border-red-600">
+							<Java />
+						</Badge>
+						<Badge label="CSS" color="text-blue-600" borderColor="border-blue-600">
+							<CSS />
+						</Badge>
+						<Badge label="MySQL" color="text-blue-400" borderColor="border-blue-400">
+							<MySQL />
+						</Badge>
+						<Badge label="PostgreSQL" color="text-blue-400" borderColor="border-blue-400">
+							<PostgreSQL />
+						</Badge>
+						<Badge label="Typescript" color="text-blue-400" borderColor="border-blue-400">
+							<Typescript />
+						</Badge>
+						<Badge label="React" color="text-cyan-400" borderColor="border-cyan-400">
+							<React />
+						</Badge>
+						<Badge label="Tailwind" color="text-cyan-400" borderColor="border-cyan-400">
+							<Tailwind />
+						</Badge>
+						<Badge label="Springboot" color="text-[#68bd45]" borderColor="border-[#68bd45]">
+							<Springboot />
+						</Badge>
+						<Badge label="Javascript" color="text-yellow-400" borderColor="border-yellow-400">
+							<Javascript />
+						</Badge>
+						<Badge label="Figma" color="text-yellow-400" borderColor="border-yellow-400">
+							<Figma />
+						</Badge>
+						<Badge label="HTML" color="text-orange-400" borderColor="border-orange-400">
+							<HTML />
+						</Badge>
+						<Badge label="Git" color="text-orange-400" borderColor="border-orange-400">
+							<Git />
+						</Badge>
+					</div>
 
 				</section>
 
@@ -102,9 +155,6 @@ import "../styles/global.css";
 						<Graduation />
 						<h3 class="w-full text-bold text-2xl">Education</h3>
 					</div>
-					
-					
-
 				</section>
 
 				<section id="about-me" class="flex flex-col scroll-mt-20">
