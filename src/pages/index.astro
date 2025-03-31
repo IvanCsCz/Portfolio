@@ -6,7 +6,6 @@ import LinkedIn from '../icons/LinkedIn.astro'
 import Mail from '../icons/Mail.astro'
 import Phone from '../icons/Phone.astro'
 import MailBox from '../icons/MailBox.astro'
-import MapPin from '../icons/MapPin.astro'
 import Language from '../icons/Language.astro'
 import Briefcase from '../icons/Briefcase.astro'
 import Code from '../icons/Code.astro'
@@ -32,6 +31,7 @@ import PersonalInfo from '../components/PersonalInfo.astro'
 import Header from '../components/Header.astro'
 import SocialMediaBtn from '../components/SocialMediaBtn.astro';
 import Experience from '../components/Experience.astro'
+import Projects from '../components/Projects.astro'
 import ModalProject1 from '../components/ModalProject1.astro';
 import ModalProject2 from '../components/ModalProject2.astro';
 import "../styles/global.css";
@@ -48,13 +48,13 @@ import Badge from '../components/Badge.astro';
 
 			<div class="flex justify-center">
 				<SocialMediaBtn href='https://github.com/IvanCsCz'>
-					<GitHub />
+					<GitHub class="size-6" />
 				</SocialMediaBtn>
 				<SocialMediaBtn href='https://www.linkedin.com/in/ivancscz/'>
 					<LinkedIn />
 				</SocialMediaBtn>
 				<a href="mailto:ivan820plus@gmail.com" class="cursor-pointer text-black bg-[#a8b1ff] hover:bg-[#7682f0] font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2">
-					<Mail />
+					<Mail class="size-6" />
 				</a>
 			</div>
 
@@ -65,9 +65,6 @@ import Badge from '../components/Badge.astro';
 				<PersonalInfo title="PHONE" label="+52 341-129-86-75" secondaryLabel="+52 341-167-48-72">
 					<Phone />
 				</PersonalInfo>
-				<!-- <PersonalInfo title="LOCATION" label="México/Jalisco">
-					<MapPin />
-				</PersonalInfo> -->
 				<PersonalInfo title="LANGUAGES" label="Spanish" secondaryLabel="English">
 					<Language />
 				</PersonalInfo>
@@ -84,7 +81,7 @@ import Badge from '../components/Badge.astro';
 
 				<section id="experience" class="flex flex-col scroll-mt-42">
 					<div class="flex items-center gap-2">
-						<Briefcase />
+						<Briefcase class="size-8" />
 						<h3 class="w-full text-bold text-2xl">Experience</h3>
 					</div>
 					<Experience />
@@ -92,67 +89,67 @@ import Badge from '../components/Badge.astro';
 
 				<section id="projects" class="flex flex-col scroll-mt-30">
 					<div class="flex items-center gap-2">
-						<Code />
+						<Code class="size-8" />
 						<h3 class="w-full text-bold text-2xl">Projects</h3>
 					</div>
-					
-					<button class="bg-blue-500 text-white px-4 py-2 rounded" id="openModal">Abrir Modal</button>
-					<ModalProject1 />
+					<Projects />
+					<!-- <button class="bg-blue-500 text-white px-4 py-2 rounded" id="openModal">Abrir Modal</button>
+					<ModalProject1 /> -->
 				</section>
 
 				<section id="skills" class="flex flex-col scroll-mt-30">
 					<div class="flex items-center gap-2">
-						<Lightbulb />
+						<Lightbulb class="size-8" />
 						<h3 class="w-full text-bold text-2xl">Skills</h3>
 					</div>
 					
 					<div class="flex flex-wrap p-6 gap-4">
 						<Badge label="Angular" color="text-red-600" borderColor="border-red-600">
-							<Angular />
+							<Angular class="size-6" />
 						</Badge>
 						<Badge label="Java" color="text-red-600" borderColor="border-red-600">
-							<Java />
+							<Java class="size-6" />
 						</Badge>
 						<Badge label="CSS" color="text-blue-600" borderColor="border-blue-600">
-							<CSS />
+							<CSS class="size-6" />
 						</Badge>
 						<Badge label="MySQL" color="text-blue-400" borderColor="border-blue-400">
-							<MySQL />
+							<MySQL class="size-6" />
 						</Badge>
 						<Badge label="PostgreSQL" color="text-blue-400" borderColor="border-blue-400">
-							<PostgreSQL />
+							<PostgreSQL class="size-6"/>
 						</Badge>
 						<Badge label="Typescript" color="text-blue-400" borderColor="border-blue-400">
-							<Typescript />
+							<Typescript class="size-5" />
 						</Badge>
 						<Badge label="React" color="text-cyan-400" borderColor="border-cyan-400">
-							<React />
+							<React class="size-6" />
 						</Badge>
 						<Badge label="Tailwind" color="text-cyan-400" borderColor="border-cyan-400">
 							<Tailwind />
 						</Badge>
 						<Badge label="Springboot" color="text-[#68bd45]" borderColor="border-[#68bd45]">
-							<Springboot />
+							<Springboot class="size-6" />
 						</Badge>
 						<Badge label="Javascript" color="text-yellow-400" borderColor="border-yellow-400">
-							<Javascript />
+							<Javascript class="size-5" />
 						</Badge>
 						<Badge label="Figma" color="text-yellow-400" borderColor="border-yellow-400">
-							<Figma />
+							<Figma class="size-5" />
 						</Badge>
 						<Badge label="HTML" color="text-orange-400" borderColor="border-orange-400">
-							<HTML />
+							<HTML class="size-6" />
 						</Badge>
 						<Badge label="Git" color="text-orange-400" borderColor="border-orange-400">
-							<Git />
+							<Git class="size-6" />
 						</Badge>
 					</div>
 
 				</section>
 
-				<section id="education" class="flex flex-col pl-1 scroll-mt-20">
+				<section id="education" class="flex flex-col pl-1 scroll-mt-30">
 					<div class="flex items-center gap-2">
-						<Graduation />
+						<Graduation class="size-8" />
 						<h3 class="w-full text-bold text-2xl">Education</h3>
 					</div>
 
@@ -175,7 +172,7 @@ import Badge from '../components/Badge.astro';
 
 				<section id="about-me" class="flex flex-col scroll-mt-20">
 					<div class="flex items-center gap-2">
-						<User />
+						<User class="size-8" />
 						<h3 class="w-full text-bold text-2xl">About me</h3>
 					</div>
 
