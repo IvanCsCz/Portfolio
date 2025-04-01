@@ -41,7 +41,7 @@ import Badge from '../components/Badge.astro';
 
 <Layout>
 	<main class="flex justify-center max-lg:flex-col max-lg:items-center py-8 px-16 gap-16">
-		<section class="sticky top-8 flex flex-col gap-8 justify-center px-6 py-9 h-[90%] rounded-2xl bg-[#1c1c1c] max-lg:relative">
+		<section class="sticky top-8 flex flex-col gap-4 justify-center px-6 py-4 h-[90%] rounded-2xl bg-[#1c1c1c] max-lg:relative">
 			<Photo />
 			
 			<h1 class="pt-6 text-center text-3xl font-bold text-balance">Jose Ivan Campos Chavez</h1>
@@ -59,15 +59,12 @@ import Badge from '../components/Badge.astro';
 				</a>
 			</div>
 
-			<div class="flex flex-col gap-2 px-6 py-2 w-full rounded-2xl bg-[#202020]">
+			<div class="flex flex-col gap-2 px-6 w-full rounded-2xl bg-[#202020]">
 				<PersonalInfo title="EMAIL" label="ivan820plus@gmail.com">
 					<MailBox />
 				</PersonalInfo>
 				<PersonalInfo title="PHONE" label="+52 341-129-86-75" secondaryLabel="+52 341-167-48-72">
 					<Phone />
-				</PersonalInfo>
-				<PersonalInfo title="LOCATION" label="México/Jalisco">
-					<MapPin />
 				</PersonalInfo>
 				<PersonalInfo title="LANGUAGES" label="Spanish" secondaryLabel="English">
 					<Language />
