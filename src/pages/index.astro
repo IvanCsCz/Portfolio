@@ -6,6 +6,7 @@ import LinkedIn from '../icons/LinkedIn.astro'
 import Mail from '../icons/Mail.astro'
 import Phone from '../icons/Phone.astro'
 import MailBox from '../icons/MailBox.astro'
+import MapPin from '../icons/MapPin.astro'
 import Language from '../icons/Language.astro'
 import Briefcase from '../icons/Briefcase.astro'
 import Code from '../icons/Code.astro'
@@ -40,7 +41,7 @@ import Badge from '../components/Badge.astro';
 
 <Layout>
 	<main class="flex justify-center max-lg:flex-col max-lg:items-center py-8 px-16 gap-16">
-		<section class="sticky top-1 max-lg:relative flex flex-col gap-4 justify-center p-6 h-fit rounded-2xl bg-[#1c1c1c]">
+		<section class="sticky top-8 flex flex-col gap-8 justify-center px-6 py-9 h-[90%] rounded-2xl bg-[#1c1c1c] max-lg:relative">
 			<Photo />
 			
 			<h1 class="pt-6 text-center text-3xl font-bold text-balance">Jose Ivan Campos Chavez</h1>
@@ -52,7 +53,7 @@ import Badge from '../components/Badge.astro';
 				</SocialMediaBtn>
 				<SocialMediaBtn href='https://www.linkedin.com/in/ivancscz/'>
 					<LinkedIn />
-				</SocialMediaBtn>
+				</SocialMediaBtn> 
 				<a href="mailto:ivan820plus@gmail.com" class="cursor-pointer text-black bg-[#a8b1ff] hover:bg-[#7682f0] font-medium rounded-lg text-sm p-2.5 text-center inline-flex items-center me-2">
 					<Mail class="size-6" />
 				</a>
@@ -64,6 +65,9 @@ import Badge from '../components/Badge.astro';
 				</PersonalInfo>
 				<PersonalInfo title="PHONE" label="+52 341-129-86-75" secondaryLabel="+52 341-167-48-72">
 					<Phone />
+				</PersonalInfo>
+				<PersonalInfo title="LOCATION" label="México/Jalisco">
+					<MapPin />
 				</PersonalInfo>
 				<PersonalInfo title="LANGUAGES" label="Spanish" secondaryLabel="English">
 					<Language />

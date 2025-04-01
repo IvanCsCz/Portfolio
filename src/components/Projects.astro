@@ -1,0 +1,125 @@
+---
+import GitHub from "../icons/GitHub.astro"
+import Springboot from "../icons/Springboot.astro"
+import Tailwind from "../icons/Tailwind.astro"
+import Link from "../icons/Link.astro"
+import LinkButton from "./LinkButton.astro"
+import React from "../icons/React.astro"
+import Typescript from "../icons/Typescript.astro"
+import Java from "../icons/Java.astro"
+import MySQL from "../icons/MySQL.astro"
+import CSS from "../icons/CSS.astro"
+import Javascript from "../icons/Javascript.astro"
+
+const TAGS = {
+  SPRINGBOOT: {
+    name: "Spring Boot",
+    class: "bg-black text-white",
+    icon: Springboot,
+  },
+  REACT: {
+    name: "React",
+    class: "bg-cyan-400 text-white",
+    icon: React,
+  },
+  CSS: {
+    name: "CSS",
+    class: "bg-blue-400 text-white",
+    icon: CSS,
+  },
+  TYPESCRIPT: {
+    name: "Typescript",
+    class: "bg-blue-400 text-white",
+    icon: Typescript,
+  },
+  JAVASCRIPT: {
+    name: "Javascript",
+    class: "bg-yellow-400 text-white",
+    icon: Javascript,
+  },
+  MYSQL: {
+    name: "MySQL",
+    class: "bg-blue-400 text-white",
+    icon: MySQL,
+  },
+  JAVA: {
+    name: "Java",
+    class: "bg-red-400 text-white",
+    icon: Java,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-cyan-600 text-white",
+    icon: Tailwind,
+  },
+}
+const PROJECTS = [
+  {
+    title: "Product list - CRUD Application",
+    description:
+      "A CRUD application focused on the basic functionality of creating, updating, getting, and deleting products from a database. Built with Spring Boot, PostgreSQL, and React to understand the integration between frontend and backend.",
+    github: "https://github.com/IvanCsCz/Full-stack-product-list",
+    image: "pro1",
+    tags: [TAGS.MYSQL, TAGS.TYPESCRIPT, TAGS.REACT , TAGS.TAILWIND, TAGS.JAVA, TAGS.SPRINGBOOT],
+  },
+  {
+    title: "User List - A React Application to Reinforce React Basics",
+    description:
+      "Plataforma gratuita con retos de programación. Más de 1 millón de visitas en un mes. +50K retos completados. Creada desde cero con Next.js, React y Tailwind CSS.",
+    github: "https://github.com/IvanCsCz/react-users-list",
+    link:"",
+    image: "pro2",
+    tags: [TAGS.REACT, TAGS.CSS, TAGS.JAVASCRIPT],
+  },
+]
+// link: "https://www.google.com",
+---
+<div class="flex flex-col p-6 gap-y-16">
+  {PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    <article class="flex flex-col space-x-0 space-y-8 group lg:flex-row lg:space-x-8 lg:space-y-0">
+      <div class="w-full lg:w-1/2">
+        <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl lg:group-hover:-translate-y-1 lg:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+          <img alt="Project image" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full lg:scale-110 lg:group-hover:scale-105" src={`/public/projects/${image}.webp`} />
+        </div>
+      </div>
+
+      <div class="w-full lg:w-1/2 lg:max-w-lg">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+          {title}
+        </h3>
+        <div class="flex flex-wrap mt-2">
+          <ul class="flex flex-row flex-wrap mb-2 gap-2">
+            {tags.map((tag) => (
+              <li>
+                <span
+                  class={`flex gap-x-1 rounded-full text-xs ${tag.class} py-2 px-3 `}
+                >
+                  <tag.icon class="size-4" />
+                  {tag.name}
+                </span>
+              </li>
+            ))}
+          </ul>
+
+        <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
+          <footer class="flex items-end justify-start mt-4 gap-x-4">
+            {github && (
+              <LinkButton href={github}>
+                <GitHub class="size-4" />
+                  Code
+              </LinkButton>
+            )}
+            {link && (
+              <LinkButton href={link}>
+                <Link class="size-4" />
+                Preview
+              </LinkButton>
+            )}
+          </footer>
+        </div>
+      </div>
+    </article>
+  ))}
+</div>
+
+
